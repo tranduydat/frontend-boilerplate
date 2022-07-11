@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Counter from "./components/Counter";
+import Greet from "./components/Greet";
+import FunctionClick from "./components/FunctionClick";
+import ClassClick from "./components/ClassClick";
+import EventBind from "./components/EventBind";
+import ParentComponent from "./components/ParentComponent";
+import UserGreeting from "./components/UserGreeting";
+import NameList from "./components/NameList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NameList />
+      {/* <Counter /> */}
+      {/* <Message /> */}
+      {/* <FunctionClick /> */}
+      {/* <ClassClick /> */}
+      {/* <ParentComponent /> */}
+      {/* <UserGreeting /> */}
+      {/* <Greet name="Dat" aka="dt" /> */}
+      {/* <Greet name="Long" aka="Dog">
+        <p>This is a children props</p>
+      </Greet>
+      <Greet name="Diana" aka="Lady" />
+      <Welcome name="Dog"/> */}
     </div>
   );
 }
