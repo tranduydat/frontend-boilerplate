@@ -19,9 +19,9 @@ function NameList() {
   const personList = persons.map((person) => (
     <Person key={person.id} person={person}></Person>
   ));
-  const names = ["Dat", "Long", "Diana"];
-  const nameList = names.map((name) => <h2 key={name}>{name}</h2>);
-  return <div>{personList}</div>;
+  const names = ["Dat", "Long", "Diana", "Dat"];
+  const nameList = names.map((name, index) => <h2 key={index}>{name}</h2>);
+  return <div>{nameList}</div>;
 }
 
 export default NameList;
