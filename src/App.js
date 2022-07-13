@@ -15,11 +15,47 @@ import LifecycleA from "./components/LifecycleA";
 import Table from "./components/Table";
 import { PureComp } from "./components/PureComp";
 import ParentComp from "./components/ParentComp";
+import RefsDemo from "./components/RefsDemo";
+import FocusInput from "./components/FocusInput";
+import FRParentInput from "./components/FRParentInput";
+import Hero from "./components/Hero";
+import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+import ClickCounterTwo from "./components/ClickCounterTwo";
+import HoverCounterTwo from "./components/HoverCounterTwo";
+import User from "./components/User";
+import CounterProp from "./components/CounterProp";
 
 function App() {
   return (
     <div className="App">
-      <ParentComp />
+      <CounterProp
+        render={(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      />
+      <CounterProp
+        render={(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      />
+
+      {/* <ClickCounterTwo />
+      <HoverCounterTwo />
+      <User render={(isLoggedIn) => (isLoggedIn ? "Dat" : "Guest")} /> */}
+      {/* <HoverCounter name="Dat" /> */}
+      {/* <ClickCounter /> */}
+      {/* <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary> */}
+      {/* <FRParentInput /> */}
+      {/* <FocusInput /> */}
+      {/* <RefsDemo /> */}
+      {/* <ParentComp /> */}
       {/* <Table /> */}
       {/* <LifecycleA /> */}
       {/* <Form /> */}
